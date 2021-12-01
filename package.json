@@ -2,7 +2,7 @@
   "name": "teste-ebx",
   "version": "1.0.0",
   "description": "Teste Ebanx",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest --env node"
   },
