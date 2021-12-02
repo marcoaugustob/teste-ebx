@@ -4,6 +4,6 @@ exports.getMovies = () => {
     return moviesData.getMovies();
 };
 
-exports.saveMovie =  (movie) => {
-   return moviesData.saveMovie(movie);
+exports.saveMovie =  (newMovie) => {
+   return moviesData.saveMovie(newMovie);
 }
