@@ -7,3 +7,7 @@ exports.getMovies = () => {
 exports.saveMovie =  (newMovie) => {
    return moviesData.saveMovie(newMovie);
 }
+
+exports.deleteMovie =  (id) => {
+    return moviesData.deleteMovie(id);
+ }

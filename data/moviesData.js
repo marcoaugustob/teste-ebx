@@ -1,4 +1,4 @@
-const filename = "../infra/database.json";
+const filename = "/Users/marco.costa/Documents/Repositorios/teste-ebx/infra/database.json";
 let movies = require(filename)
 const helper = require('../helpers/helper.js')
 
