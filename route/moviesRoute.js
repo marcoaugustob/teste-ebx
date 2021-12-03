@@ -15,8 +15,8 @@ router.get('/movies', async (req, res) => {
     })
 })
 
-router.post('/', m.checkFieldsPost, async (req, res) => {
-    await moviesService.insertPost(req.body)
+router.post('/movies', m.checkFieldsMovie, async (req, res) => {
+    await moviesService.saveMovie(req.body)
     .then(movie => res.status(201).json({
         message: `The post #${movie.id} has been created`,
         content: movie

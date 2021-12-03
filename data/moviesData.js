@@ -1,3 +1,4 @@
+//TODO - ajustar env
 const filename = "/Users/marco.costa/Documents/Repositorios/teste-ebx/infra/database.json";
 let movies = require(filename)
 const helper = require('../helpers/helper.js')
@@ -26,10 +27,10 @@ function saveMovie(newMovie) {
 }
 function deleteMovie(id) {
     return new Promise((resolve, reject) => {
-        helper.mustBeInArray(posts, id)
+        helper.mustBeInArray(movies, id)
             .then(() => {
-                posts = posts.filter(p => p.id !== id)
-                helper.writeJSONFile(filename, posts)
+                movies = movies.filter(p => p.id !== id)
+                helper.writeJSONFile(filename, movies)
                 resolve()
             })
             .catch(err => reject(err))

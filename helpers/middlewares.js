@@ -6,7 +6,7 @@ function mustBeInteger(req, res, next) {
         next()
     }
 }
-function checkFieldsPost(req, res, next) {
+function checkFieldsMovie(req, res, next) {
     const { title, content } = req.body
     if (title && content) {
         next()
@@ -16,5 +16,5 @@ function checkFieldsPost(req, res, next) {
 }
 module.exports = {
     mustBeInteger,
-    checkFieldsPost
+    checkFieldsMovie
 }

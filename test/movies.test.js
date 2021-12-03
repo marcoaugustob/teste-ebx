@@ -7,13 +7,24 @@ const generate =(size) =>{
 };
 
 test('Should get movies', async () => {
-    const movie3 = await moviesService.saveMovie({title: generate(5), content: generate(15), })
+    const movie3 = await moviesService.saveMovie({title: generate(5), content: generate(15) });
 
     const response = await axios({
         url: 'http://localhost:3000/movies',
         method: 'get'
-    })
-    const movies =  response.data;
-    expect(movies).toHaveLength(3);
+    });
+    expect(response.status).toBe(200);
     await moviesService.deleteMovie(3)
+})
+test('Should save a movie', async () => {
+    const data = {title: generate(5), content: generate(15) };
+
+    const response = await axios({
+        url: 'http://localhost:3000/movies',
+        method: 'post',
+        data
+    });
+    const movie =  response.data;
+    expect(movie.title).toBe(data.title);
+    await moviesService.deleteMovie(post.id)
 })
